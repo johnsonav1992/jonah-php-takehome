@@ -22,6 +22,7 @@ if (isset($_POST['submit'])) {
     if (!$errors) {
         $sql = "INSERT INTO contact_info (first_name, last_name, email, message)
                     VALUES ('$first_name', '$last_name', '$email', '$message')";
+
         if (mysqli_query($connection, $sql)) {
             echo "Thanks for the message!";
             header('Location: index.php');
