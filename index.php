@@ -1,6 +1,7 @@
 <?php
 include 'config/db.php';
 include 'utils/utils.php';
+include 'components/test.php'
 ?>
 
 <?php
@@ -45,6 +46,7 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
+    <?php include_once 'components/test.php' ?>
     <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
         <div style="display: flex; flex-direction: column; width: 200px;">
             <label for="first_name">First Name</label>
