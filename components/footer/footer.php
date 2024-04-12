@@ -8,6 +8,15 @@
                 <img src="assets/fb.svg" alt="logo">
             </div>
         </div>
+        <div class="contact-info gap-1">
+            <p class="white-text">866-272-5086</p>
+            <p class="white-text">hello@jonahdigital.com</p>
+            <div class="row-container gap-tiny mt-tiny">
+                <p class="white-text">Contact</p>
+                <p class="white-text">|</p>
+                <p class="white-text">Support</p>
+            </div>
+        </div>
     </div>
     </div>
 </footer>
