@@ -1,0 +1,11 @@
+@import "../../styles/main.css";
+
+.header {
+    width: 90%;
+    height: 93px;
+    max-width: 1509px;
+    border-bottom: 1px solid var(--jonah-black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

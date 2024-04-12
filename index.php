@@ -1,14 +1,9 @@
 <?php
 include 'config/db.php';
 include 'utils/utils.php';
-include 'components/test.php'
 ?>
 
 <?php
-
-$sql = 'SELECT * from contact_info';
-$result = mysqli_query($connection, $sql);
-$items = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 $first_name = $last_name = $email = $message = '';
 
@@ -41,12 +36,13 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./components/header/header.css">
     <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
     <title>Jonah Take Home Project</title>
 </head>
 
 <body>
-    <?php include_once 'components/test.php' ?>
+    <?php include_once 'components/header/header.php' ?>
     <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
         <div style="display: flex; flex-direction: column; width: 200px;">
             <label for="first_name">First Name</label>
