@@ -12,31 +12,12 @@ $items = mysqli_fetch_all($result, MYSQLI_ASSOC);
 $first_name = $last_name = $email = $message = '';
 
 if (isset($_POST['submit'])) {
-    $errors = [];
+    $errors = validate_form();
 
-    if (empty($_POST['first_name'])) {
-        $errors['first_name'] = 'First name is required';
-    } else {
-        $first_name = sanitize_input('first_name');
-    }
-
-    if (empty($_POST['last_name'])) {
-        $errors['last_name'] = 'Last name is required';
-    } else {
-        $last_name = sanitize_input('last_name');
-    }
-
-    if (empty($_POST['email'])) {
-        $errors['email'] = 'Email is required';
-    } else {
-        $email = sanitize_input('email', true);
-    }
-
-    if (empty($_POST['message'])) {
-        $errors['message'] = 'Message is required';
-    } else {
-        $message = sanitize_input('message');
-    }
+    $first_name = sanitize_input('first_name');
+    $last_name = sanitize_input('last_name');
+    $email = sanitize_input('email', true);
+    $message = sanitize_input('message');
 
     if (!$errors) {
         $sql = "INSERT INTO contact_info (first_name, last_name, email, message)
