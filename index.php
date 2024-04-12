@@ -17,6 +17,10 @@
             <p class="caption-text caption-text-large">Video Library</p>
             <h2>Dive deep into everything Jonah has to offer with a library of engaging videos.</h2>
         </div>
+        <div class="video-card-container">
+            <h2 class="white-text">Welcome to Jonah!</h2>
+            <button class="black-button">Watch Video</button>
+        </div>
     </div>
 </body>
 
