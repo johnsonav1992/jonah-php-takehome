@@ -97,6 +97,14 @@ body {
     border-radius: .75rem;
 }
 
+.scroll-x {
+    overflow-x: scroll;
+}
+
+.scroll-x::-webkit-scrollbar {
+    display: none;
+}
+
 .caption-text {
     color: var(--jonah-black);
     font-size: 16px;
