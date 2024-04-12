@@ -41,4 +41,20 @@
     width: 100%;
     height: 268px;
     border-radius: 0px 0px 30px 30px;
+    padding: 40px;
+    display: flex;
 }
+
+.card-button {
+    width: 70px;
+    aspect-ratio: 1;
+    background-color: var(--jonah-black);
+    border-radius: 40px;
+    border: none;
+    align-self: flex-end;
+}
+
+.card-button:hover {
+    cursor: pointer;
+}
+

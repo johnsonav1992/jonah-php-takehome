@@ -36,7 +36,11 @@ $cards = [
                         <?php echo $card['description'] ?>
                     </p>
                 </div>
-                <div class="card-image" style="<?php echo "background: url(" . $card['img'] . ") 50% / cover no-repeat;" ?>"></div>
+                <div class="card-image" style="<?php echo "background: url(" . $card['img'] . ") 50% / cover no-repeat;" ?>">
+                    <button class="card-button">
+                        <img src="assets/TriangleArrow-Right.svg" alt="arrow" style="transform: translate(10%)">
+                    </button>
+                </div>
             </div>
         <?php endforeach; ?>
     </div>
