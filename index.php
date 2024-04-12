@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./components/header/header.css">
     <link rel="stylesheet" href="./components/footer/footer.css">
-    <link rel="stylesheet" href="./components/themes-section/themes.css">
+    <link rel="stylesheet" href="./styles/card-sections.css">
     <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
     <title>Jonah Take Home Project</title>
 </head>

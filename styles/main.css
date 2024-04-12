@@ -201,7 +201,7 @@ h6 {
 
 .video-card-container {
     width: 100%;
-    max-width: 1512px;
+    /* max-width: 1512px; */
     min-height: 817px;
     border-radius: 36px;
     background: url("../assets/video.jpeg") lightgray 50% / cover no-repeat;
