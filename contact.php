@@ -37,12 +37,13 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./components/header/header.css">
+    <link rel="stylesheet" href="./components/footer/footer.css">
     <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
     <title>Contact</title>
 </head>
 
 <body>
-    <div class="main-wrapper">
+    <div class="main-wrapper" style="height: 90vh;">
         <?php include_once './components/header/header.php' ?>
         <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
             <div style="display: flex; flex-direction: column; width: 200px;">
@@ -58,6 +59,7 @@ if (isset($_POST['submit'])) {
             </div>
         </form>
     </div>
+    <?php include_once './components/footer/footer.php' ?>
 </body>
 
 </html>
