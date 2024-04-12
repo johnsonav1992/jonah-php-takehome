@@ -38,6 +38,7 @@
     background-color: var(--jonah-black);
     border-radius: .75rem;
     align-items: center;
+    cursor: pointer;
 }
 
 .phone-container {

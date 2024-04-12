@@ -8,9 +8,15 @@ $year = date("Y");
         <div class="row-container space-between full-width">
             <img src="assets/jonah-logo-white.svg" alt="logo">
             <div class="row-container gap-tiny">
-                <img src="assets/ig.svg" alt="logo">
-                <img src="assets/linkedin.svg" alt="logo">
-                <img src="assets/fb.svg" alt="logo">
+                <a href="https://www.instagram.com/jonahdigital/" class="plain-link" target="_blank">
+                    <img src="assets/ig.svg" alt="logo">
+                </a>
+                <a href="https://www.linkedin.com/company/jonahdigital/" class="plain-link" target="_blank">
+                    <img src="assets/linkedin.svg" alt="logo">
+                </a>
+                <a href="https://www.facebook.com/jonahdigital/" class="plain-link" target="_blank">
+                    <img src="assets/fb.svg" alt="logo">
+                </a>
             </div>
         </div>
         <div class="contact-info gap-1">
@@ -19,7 +25,7 @@ $year = date("Y");
                 <p class="white-text body-1">hello@jonahdigital.com</p>
             </div>
             <div class="row-container gap-tiny mt-tiny body-2">
-                <p class="white-text">Contact</p>
+                <a class="white-text plain-link" href="contact.php">Contact</a>
                 <p class="white-text">|</p>
                 <p class="white-text">Support</p>
             </div>
@@ -34,7 +40,7 @@ $year = date("Y");
                 <p class="white-text">Site Map</p>
             </div>
         </div>
-        <div class="order-online-card">
+        <a class="order-online-card plain-link" href="https://orderjonah.com" target="_blank">
             <div class="phone-container">
                 <img src="assets/phone.png" alt="phone" height="60px" class="phone">
             </div>
@@ -43,6 +49,6 @@ $year = date("Y");
                 <p class="body-2 mt-tiny">Visit orderjonah.com</p>
             </div>
             <img src="assets/arrow-right.svg" alt="arrow" width="24px" height="24px">
-        </div>
+        </a>
     </div>
 </footer>

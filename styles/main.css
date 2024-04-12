@@ -109,6 +109,10 @@ body {
     font-size: 14px;
 }
 
+.plain-link {
+    text-decoration: none;
+}
+
 h2 {
     color: var(--jonah-black);
     font-size: 70px;
