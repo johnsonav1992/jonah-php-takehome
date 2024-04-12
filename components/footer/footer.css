@@ -1,10 +1,17 @@
 @import '../../styles/main.css';
 
 .footer-wrapper {
-    height: 511px;
+    display: flex;
+    flex-direction: column;
+    min-height: 511px;
     width: 100%;
     background-color: var(--dark-black);
     padding: 84px;
+    justify-content: space-between;
+}
+
+.footer-wrapper * {
+    color: var(--dark-gray);
 }
 
 .footer-contact-section {
@@ -22,9 +29,6 @@
     gap: 3px;
 }
 
-.contact-info * {
-    color: var(--dark-gray);
-}
 
 .gap-tiny {
     gap: .5rem;
