@@ -33,6 +33,13 @@ body {
     width: 90%;
 }
 
+.inner-wrapper {
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 6.35rem;
+}
+
 .row-container {
     display: flex;
     align-items: center;
@@ -98,8 +105,6 @@ h2 {
 
 .call-to-action-container {
     max-width: 918px;
-    margin-top: 250px;
-    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     align-self: flex-start;
@@ -126,3 +131,8 @@ h2 {
     cursor: pointer !important;
 }
 
+.main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3.75rem;
+}

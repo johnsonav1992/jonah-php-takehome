@@ -3,7 +3,6 @@
 .header {
     width: 100%;
     height: 93px;
-    max-width: 1509px;
     border-bottom: 1px solid var(--jonah-black);
     display: flex;
     align-items: center;
