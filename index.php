@@ -32,19 +32,6 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<?php if (empty($items)) : ?>
-    <p>There are no items</p>
-<?php endif; ?>
-
-<?php foreach ($items as $item) : ?>
-    <div>
-        <p><?php echo $item['first_name'] ?></p>
-        <p><?php echo $item['last_name'] ?></p>
-        <p><?php echo $item['email'] ?></p>
-        <p><?php echo $item['message'] ?></p>
-    </div>
-<?php endforeach; ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,7 +39,7 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Jonah Take Home Project</title>
 </head>
 
 <body>

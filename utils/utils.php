@@ -20,7 +20,6 @@ function validate_form()
     foreach ($_POST as $field => $value) {
         if (empty($value)) {
             $errors[$field] = convert_case($field) . " is required";
-            echo convert_case($field) . "is required";
         }
     }
 
