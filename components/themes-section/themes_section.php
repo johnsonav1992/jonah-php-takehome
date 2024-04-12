@@ -3,22 +3,22 @@ $cards = [
     [
         'title' => 'Convert Prospects Faster With SkyLease',
         'description' => 'Beautiful and effective: get the best of both worlds with SkyLease',
-        'img' => ''
+        'img' => 'assets/phone-call.jpeg'
     ],
     [
         'title' => 'Make Conversions Easier with PopDown',
         'description' => 'Schedule your pop and avoid the block.',
-        'img' => ''
+        'img' => 'assets/keyboard.jpg'
     ],
     [
         'title' => '3 Steps to a Smoother Lease-Up',
         'description' => 'There’s a lot going on when you have a property in lease-up. Oftentimes, it’s a mad dash to get everythin...',
-        'img' => ''
+        'img' => 'assets/video.jpeg'
     ],
     [
         'title' => '3 Steps to a Smoother Lease-Up',
         'description' => 'There’s a lot going on when you have a property in lease-up. Oftentimes, it’s a mad dash to get everythin...',
-        'img' => ''
+        'img' => 'assets/video.jpeg'
     ],
 ]
 ?>
@@ -36,6 +36,7 @@ $cards = [
                         <?php echo $card['description'] ?>
                     </p>
                 </div>
+                <div class="card-image" style="<?php echo "background: url(" . $card['img'] . ") 50% / cover no-repeat;" ?>"></div>
             </div>
         <?php endforeach; ?>
     </div>
