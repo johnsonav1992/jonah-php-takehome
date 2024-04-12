@@ -12,6 +12,7 @@
     --background-gray: #F3F2F0;
     --jonah-black: #282827;
     --warm-white: #F3F2F0;
+    --dark-black: #151515;
 }
 
 *, *::before, *::after {
@@ -23,7 +24,7 @@
 body {
     background-color: var(--background-gray);
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,6 +48,14 @@ body {
 
 .gap-1 {
     gap: 1rem;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.full-width {
+    width: 100%;
 }
 
 .caption-text {
@@ -135,4 +144,5 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 3.75rem;
+    margin-bottom: 100px;
 }
