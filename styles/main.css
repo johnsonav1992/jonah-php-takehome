@@ -57,6 +57,10 @@ body {
     gap: 1rem;
 }
 
+.gap-2 {
+    gap: 2rem;
+}
+
 .gap-tiny {
     gap: .5rem;
 }
@@ -121,6 +125,17 @@ h2 {
     line-height: 120%;
 }
 
+h3 {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+h5 {
+    font-size: 26px;
+}
+
 h6 {
     font-size: 24px;
     font-style: normal;
@@ -128,9 +143,6 @@ h6 {
     line-height: 16px; 
 }
 
-h5 {
-    font-size: 26px;
-}
 
 .caption-text-large {
     font-size: 20px;

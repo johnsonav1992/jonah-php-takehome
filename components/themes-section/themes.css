@@ -1,0 +1,39 @@
+.theme-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.video-card {
+    border-radius: 30px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    width: 457px;
+    height: 507px;
+}
+
+.card-info-container {
+    display: flex;
+    padding: 40px 40px 60px 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.card-title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+.card-details {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
