@@ -24,6 +24,7 @@ if (isset($_POST['submit'])) {
         if (mysqli_query($connection, $sql)) {
             $_SESSION['success'] = "Message submitted successfully!";
             header('Location: contact.php');
+            exit(0);
         } else {
             echo "Error: " . mysqli_error($connection);
         }
@@ -53,7 +54,15 @@ if (isset($_POST['submit'])) {
                 <h2>Have Questions?</h2>
                 <h3>Send us a message!</h3>
             </div>
-            <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
+            <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+                <h6 style="margin-bottom: 1rem;">
+                    <?php
+                    if (isset($_SESSION['success'])) {
+                        echo $_SESSION['success'];
+                        unset($_SESSION['success']);
+                    }
+                    ?>
+                </h6>
                 <div class="contact-form">
                     <div class="form-group">
                         <label for="first_name" class="form-label">First Name</label>
@@ -84,15 +93,6 @@ if (isset($_POST['submit'])) {
                         <?php endif; ?>
                     </div>
                     <button name="submit" type="submit" class="black-button contact-submit">Submit</button>
-                    <p>
-                        <?php
-                        if (isset($_SESSION['success'])) {
-                            $success_message = $_SESSION['success'];
-                            echo $success_message;
-                            unset($_SESSION['success']);
-                        }
-                        ?>
-                    </p>
                 </div>
             </form>
         </div>
