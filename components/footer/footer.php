@@ -21,13 +21,19 @@ $year = date("Y");
         </div>
         <div class="contact-info gap-1">
             <div class="column-container gap-tiny">
-                <h5 class="white-text">866-272-5086</h5>
-                <p class="white-text body-1">hello@jonahdigital.com</p>
+                <a href="tel:+8662725086" class="plain-link">
+                    <h5 class="white-text">866-272-5086</h5>
+                </a>
+                <a href="mailto:hello@jonahdigital.com" class="plain-link">
+                    <p class="white-text body-1">hello@jonahdigital.com</p>
+                </a>
             </div>
             <div class="row-container gap-tiny mt-tiny body-2">
                 <a class="white-text plain-link" href="contact.php">Contact</a>
                 <p class="white-text">|</p>
-                <p class="white-text">Support</p>
+                <a href="https://jonahdigital.com/support/" class="plain-link">
+                    <p class="white-text">Support</p>
+                </a>
             </div>
         </div>
     </div>
@@ -35,9 +41,13 @@ $year = date("Y");
         <div class="copyright row-container gap-tiny white-text">
             <p>© <?php echo $year ?> All Rights Reserved.</p>
             <div class="row-container gap-tiny">
-                <p class="white-text">Privacy Policy</p>
+                <a href="https://jonahdigital.com/privacy-policy/" class="plain-link">
+                    <p class="white-text">Privacy Policy</p>
+                </a>
                 <p class="white-text">|</p>
-                <p class="white-text">Site Map</p>
+                <a href="https://jonahdigital.com/site-map/" class="plain-link">
+                    <p class="white-text">Site Map</p>
+                </a>
             </div>
         </div>
         <a class="order-online-card plain-link" href="https://orderjonah.com" target="_blank">
