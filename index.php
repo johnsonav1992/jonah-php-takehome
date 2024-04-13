@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./components/header/header.css">
     <link rel="stylesheet" href="./components/footer/footer.css">
     <link rel="stylesheet" href="./styles/card-sections.css">
-    <link href="https://db.onlinewebfonts.com/c/1a204cd3ccb7f25e06faa548e6251a59?family=Fabriga" rel="stylesheet">
     <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
     <title>Jonah Take Home Project</title>
 </head>
