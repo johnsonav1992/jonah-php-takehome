@@ -9,8 +9,6 @@ include 'utils/utils.php';
 $first_name = $last_name = $email = $message = '';
 $errors = [];
 
-echo array_key_exists('first_name', $errors);
-
 if (isset($_POST['submit'])) {
     $errors = validate_form();
 
@@ -43,6 +41,7 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="./styles/contact.css">
     <link rel="stylesheet" href="./components/header/header.css">
     <link rel="stylesheet" href="./components/footer/footer.css">
+    <link href="https://db.onlinewebfonts.com/c/1a204cd3ccb7f25e06faa548e6251a59?family=Fabriga" rel="stylesheet">
     <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
     <title>Contact</title>
 </head>
@@ -50,7 +49,7 @@ if (isset($_POST['submit'])) {
 <body>
     <div class="main-wrapper">
         <?php include_once './components/header/header.php' ?>
-        <div class="main-contact-wrapper full-width space-between">
+        <div class="main-contact-wrapper">
             <div class="column-container">
                 <h2>Have Questions?</h2>
                 <h3>Send us a message!</h3>
@@ -89,7 +88,9 @@ if (isset($_POST['submit'])) {
                     <p>
                         <?php
                         if (isset($_SESSION['success'])) {
-                            echo $_SESSION['success'];
+                            $success_message = $_SESSION['success'];
+                            echo $success_message;
+                            unset($_SESSION['success']);
                         }
                         ?>
                     </p>

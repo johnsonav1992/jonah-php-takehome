@@ -5,7 +5,7 @@ $year = date("Y");
 
 <footer class="footer-wrapper">
     <div class="footer-contact-section">
-        <div class="row-container space-between full-width">
+        <div class="socials row-container space-between full-width">
             <img src="assets/jonah-logo-white.svg" alt="logo">
             <div class="row-container gap-tiny">
                 <a href="https://www.instagram.com/jonahdigital/" class="plain-link" target="_blank">
@@ -31,8 +31,8 @@ $year = date("Y");
             </div>
         </div>
     </div>
-    <div class="row-container space-between align-end">
-        <div class="row-container gap-tiny white-text">
+    <div class="copyright row-container space-between align-end">
+        <div class="copyright row-container gap-tiny white-text">
             <p>© <?php echo $year ?> All Rights Reserved.</p>
             <div class="row-container gap-tiny">
                 <p class="white-text">Privacy Policy</p>

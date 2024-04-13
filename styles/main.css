@@ -1,13 +1,3 @@
-@font-face {
-    font-family: "Fabriga";
-    src: url("https://db.onlinewebfonts.com/t/1a204cd3ccb7f25e06faa548e6251a59.eot");
-    src: url("https://db.onlinewebfonts.com/t/1a204cd3ccb7f25e06faa548e6251a59.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/1a204cd3ccb7f25e06faa548e6251a59.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/1a204cd3ccb7f25e06faa548e6251a59.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/1a204cd3ccb7f25e06faa548e6251a59.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/1a204cd3ccb7f25e06faa548e6251a59.svg#Fabriga")format("svg");
-}
-
 :root {
     --background-gray: #F3F2F0;
     --dark-gray: #999999;
