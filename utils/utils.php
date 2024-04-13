@@ -18,6 +18,8 @@ function validate_form()
     $errors = [];
 
     foreach ($_POST as $field => $value) {
+        if ($field === 'submit') continue;
+
         if (empty($value)) {
             $errors[$field] = convert_case($field) . " is required";
         }

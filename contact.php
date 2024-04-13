@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'config/db.php';
 include 'utils/utils.php';
 ?>
@@ -6,6 +7,9 @@ include 'utils/utils.php';
 <?php
 
 $first_name = $last_name = $email = $message = '';
+$errors = [];
+
+echo array_key_exists('first_name', $errors);
 
 if (isset($_POST['submit'])) {
     $errors = validate_form();
@@ -20,8 +24,8 @@ if (isset($_POST['submit'])) {
                     VALUES ('$first_name', '$last_name', '$email', '$message')";
 
         if (mysqli_query($connection, $sql)) {
-            echo "Thanks for the message!";
-            header('Location: index.php');
+            $_SESSION['success'] = "Message submitted successfully!";
+            header('Location: contact.php');
         } else {
             echo "Error: " . mysqli_error($connection);
         }
@@ -36,6 +40,7 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/contact.css">
     <link rel="stylesheet" href="./components/header/header.css">
     <link rel="stylesheet" href="./components/footer/footer.css">
     <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
@@ -43,21 +48,54 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <div class="main-wrapper" style="height: 90vh;">
+    <div class="main-wrapper">
         <?php include_once './components/header/header.php' ?>
-        <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
-            <div style="display: flex; flex-direction: column; width: 200px;">
-                <label for="first_name">First Name</label>
-                <input type="text" id="first_name" name="first_name">
-                <label for="last_name">Last Name</label>
-                <input type="text" id="last_name" name="last_name">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email">
-                <label for="message">Message</label>
-                <textarea id="message" name="message"></textarea>
-                <button name="submit" type="submit">Submit</button>
+        <div class="main-contact-wrapper full-width space-between">
+            <div class="column-container">
+                <h2>Have Questions?</h2>
+                <h3>Send us a message!</h3>
             </div>
-        </form>
+            <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
+                <div class="contact-form">
+                    <div class="form-group">
+                        <label for="first_name" class="form-label">First Name</label>
+                        <input type="text" id="first_name" name="first_name" class="textfield <?php echo array_key_exists('first_name', $errors) ? "field-error" : null; ?> ">
+                        <?php if (array_key_exists('first_name', $errors)) : ?>
+                            <p class="error-message"><?php echo $errors['first_name']; ?></p>
+                        <?php endif; ?>
+                    </div>
+                    <div class=" form-group">
+                        <label for="last_name" class="form-label">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" class="textfield <?php echo array_key_exists('last_name', $errors) ? "field-error" : null; ?> ">
+                        <?php if (array_key_exists('last_name', $errors)) : ?>
+                            <p class="error-message"><?php echo $errors['last_name']; ?></p>
+                        <?php endif; ?>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="textfield <?php echo array_key_exists('email', $errors) ? "field-error" : null; ?> ">
+                        <?php if (array_key_exists('email', $errors)) : ?>
+                            <p class="error-message"><?php echo $errors['email']; ?></p>
+                        <?php endif; ?>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" class="textfield text-area <?php echo array_key_exists('message', $errors) ? "field-error" : null; ?> " rows="6"></textarea>
+                        <?php if (array_key_exists('message', $errors)) : ?>
+                            <p class="error-message"><?php echo $errors['message']; ?></p>
+                        <?php endif; ?>
+                    </div>
+                    <button name="submit" type="submit" class="black-button contact-submit">Submit</button>
+                    <p>
+                        <?php
+                        if (isset($_SESSION['success'])) {
+                            echo $_SESSION['success'];
+                        }
+                        ?>
+                    </p>
+                </div>
+            </form>
+        </div>
     </div>
     <?php include_once './components/footer/footer.php' ?>
 </body>

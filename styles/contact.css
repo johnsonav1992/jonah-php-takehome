@@ -1,0 +1,60 @@
+.main-contact-wrapper {
+    display: flex;
+    padding: 64px 32px;
+}
+
+.main-contact-wrapper > form {
+    width: 50%;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.form-label {
+    font-size: 16px;
+}
+
+.textfield {
+    padding: 0 20px;
+    border: none;
+    border-radius: 6px;
+    min-height: 54px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.textfield:hover {
+    background-color: var(--light-gray);
+}
+
+.textfield:focus {
+    outline: none;
+    background-color: var(--light-gray);
+}
+
+.field-error {
+    border: 1px solid red;
+}
+
+.error-message {
+    font-size: 12px;
+    color: red;
+}
+
+.text-area {
+    padding: 20px;
+    resize: vertical;
+}
+
+.contact-submit {
+    max-width: 40%;
+}
