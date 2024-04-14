@@ -2,9 +2,6 @@
 session_start();
 include 'config/db.php';
 include 'utils/utils.php';
-?>
-
-<?php
 
 $first_name = $last_name = $email = $message = '';
 $errors = [];
