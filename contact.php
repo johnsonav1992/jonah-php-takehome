@@ -40,6 +40,7 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="./components/header/header.css">
     <link rel="stylesheet" href="./components/footer/footer.css">
     <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
+    <script src="./js/script.js" defer></script>
     <title>Contact</title>
 </head>
 
@@ -51,15 +52,15 @@ if (isset($_POST['submit'])) {
                 <h2>Have Questions?</h2>
                 <h3>Send us a message!</h3>
             </div>
+            <?php
+            if (isset($_SESSION['success'])) : ?>
+                <div class="message-toast">
+                    <h6>Message sent successfully!</h6>
+                    <img src="./assets/close-button.svg" alt="close" height="24px" width="24px" class="message-close" />
+                </div>
+            <?php unset($_SESSION['success']);
+            endif ?>
             <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
-                <h6 style="margin-bottom: 1rem;">
-                    <?php
-                    if (isset($_SESSION['success'])) {
-                        echo $_SESSION['success'];
-                        unset($_SESSION['success']);
-                    }
-                    ?>
-                </h6>
                 <div class="contact-form">
                     <div class="form-group">
                         <label for="first_name" class="form-label">First Name</label>
